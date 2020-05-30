@@ -6,7 +6,7 @@ module.exports.index = async (req, res) => {
 }
 
 module.exports.productDetail = async (req, res) => {
-  const product = await Product.findById(req.query.id)
+  const product = await Product.findOne({ slug: req.query.slug });
   res.json(product);
 } 
 
