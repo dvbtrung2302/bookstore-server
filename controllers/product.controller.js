@@ -2,6 +2,7 @@ const Product = require('../models/product.model');
 
 module.exports.index = async (req, res) => {
   const { _limit, _category, _keyword } = req.query;
+  console.log(_keyword);
   let regex = new RegExp(_keyword,'i');
 
   if ( !_category && !_keyword) {
