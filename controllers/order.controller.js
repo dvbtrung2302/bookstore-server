@@ -10,3 +10,12 @@ module.exports.index = async (req, res) => {
     res.status(400).send(err);
   }
 }
+
+module.exports.removeAll = async (req, res) => {
+  const orders = await Order.deleteMany({});
+  try {
+    res.status(200).json("Delete successfully!");
+  } catch (err) {
+    res.status(400).send(err);
+  }
+}

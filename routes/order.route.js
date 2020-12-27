@@ -6,4 +6,6 @@ const router = express.Router();
 
 router.get('/', middleware.verifyToken, controller.index);
 
+router.get('/remove-all', middleware.verifyToken, controller.removeAll)
+
 module.exports = router;
