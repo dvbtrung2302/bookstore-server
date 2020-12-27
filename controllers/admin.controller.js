@@ -60,3 +60,13 @@ module.exports.addProduct = async (req, res) => {
   const product = await Product.create(req.body);
   res.json(product);
 }
+
+module.exports.deleteProduct = async (req, res) => {
+  try {
+    const data = req.body;
+    const result = await Product.findByIdAndDelete(data._id);
+    res.status(200).send("Delete sunccessfully");
+  } catch (err) {
+    res.status(400).send(err);
+  }
+}

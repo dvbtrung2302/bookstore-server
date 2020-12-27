@@ -14,4 +14,6 @@ router.patch('/update', middleware.verifyToken, controller.updateProduct);
 
 router.post('/add-product', middleware.verifyToken, controller.addProduct);
 
+router.post('/delete-product', middleware.verifyToken, controller.deleteProduct);
+
 module.exports = router;
