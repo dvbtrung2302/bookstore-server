@@ -8,4 +8,6 @@ router.get('/', middleware.verifyToken, controller.index);
 
 router.get('/remove-all', middleware.verifyToken, controller.removeAll)
 
+router.patch('/update-status', middleware.verifyToken, controller.updateStatus);
+
 module.exports = router;
