@@ -9,6 +9,7 @@ const userRoute = require('./routes/user.route');
 const checkoutRoute = require('./routes/checkout.route');
 const orderRoute = require('./routes/order.route');
 const adminRoute = require('./routes/admin.route');
+const promotionRoute = require('./routes/promotion.route');
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -32,6 +33,8 @@ app.use('/user', userRoute);
 app.use('/checkout', checkoutRoute);
 app.use('/order', orderRoute);
 app.use('/admin', adminRoute);
+app.use('/promotion', promotionRoute);
+
 
 app.get('/', (req, res) => res.send('Hello World!'))
 

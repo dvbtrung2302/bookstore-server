@@ -12,7 +12,8 @@ const orderSchema = new mongoose.Schema({
   totalPrice: Number,
   payment: String,
   date: String,
-  orderTime: String
+  orderTime: String,
+  status: Number
 })
 
 const Order = mongoose.model('Order', orderSchema);

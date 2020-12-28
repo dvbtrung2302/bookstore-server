@@ -26,7 +26,8 @@ module.exports.postCheckout = async (req, res) => {
       payment: order.payment,
       totalPrice: order.totalPrice,
       date: date,
-      orderTime: orderTime
+      orderTime: orderTime,
+      status: 1
     })
   
     try {
@@ -57,7 +58,8 @@ module.exports.postCheckout = async (req, res) => {
         payment: order.payment,
         totalPrice: order.totalPrice,
         date: date,
-        orderTime: orderTime
+        orderTime: orderTime,
+        status: 1
       })
       const savedOrder = await newOrder.save();
       res.status(200).json({order: savedOrder});
